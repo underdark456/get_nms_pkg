@@ -7,7 +7,7 @@ def mail(text):
   mailserver = smtplib.SMTP('smtp.office365.com', 587)
   mailserver.ehlo()
   mailserver.starttls()
-  mailserver.login('ishavrov@comtechtel.com', 'H9a#Pq7)')
+  mailserver.login('ishavrov@comtechtel.com', 'pass')
   # Adding a newline before the body text fixes the missing message body
   mailserver.sendmail(f'ishavrov@comtechtel.com', 'ishavrov@comtechtel.com', 'Subject: {}\n\n{}'.format('New NMS 4 Version', '<font face="Courier New, Courier, monospace">' + text + '</font>'))
   mailserver.quit()
